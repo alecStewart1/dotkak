@@ -13,6 +13,7 @@ set-option -add global ui_options terminal_set_title=no ncurses_set_title=false
 set-option -add global ui_options terminal_change_colors=true
 set-option -add global ui_options terminal_assistant=cat ncurses_wheel_done_button=0 
 set-option -add global ui_options terminal_enable_mouse=no
+set-option -add global ui_options terminal_synchronized=yes
 
 # TODO make the modeline prettier
 set-option global modelinefmt '{{mode_info}} / %val{bufname} [ %opt{filetype} ] / %val{cursor_line}:%val{cursor_char_column} {{context_info}} / %val{client}'
@@ -47,7 +48,7 @@ hook global WinCreate .* %{
 
 hook global BufCreate .* %{ try %{ editorconfig-load } }
 
-set-option global scrolloff   5,10
+set-option global scrolloff   2,2
 
 set-option global autoinfo command|onkey
 

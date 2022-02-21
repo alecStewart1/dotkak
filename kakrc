@@ -15,7 +15,6 @@ evaluate-commands %sh{
 		settings.kak
 		keys.kak        
 		plugins.kak
-		coding.kak
 	"
 	for f in $config_files; do
 		printf "%s" "

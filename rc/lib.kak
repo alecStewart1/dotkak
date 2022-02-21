@@ -15,7 +15,6 @@ define-command -override move-lines-up -docstring 'move line up' %{
   execute-keys -draft '<a-x><a-_><a-:><a-;>Z;bzk<a-x>dzp'
 }
 
-
 # --- More Vim-like ---
 #
 

@@ -21,7 +21,7 @@ plug-chain "andreyorst/plug.kak" noload config %{
 	set-option global plug_max_active_downloads 16
 	set-option global plug_always_ensure true
 } plug "gustavo-hms/luar" %{
-	set-option global luar_interpreter luajit
+	set-option global luar_interpreter luajit	
 	plug "gustavo-hms/peneira" %{
 		require-module peneira
 	}
@@ -40,7 +40,13 @@ plug-chain "andreyorst/plug.kak" noload config %{
 
 	hook global FocusOut .* %{ state-save-reg-save dquote }
 	hook global FocusIn  .* %{ state-save-reg-load dquote }
-} plug "https://gitlab.com/kstr0k/mru-files.kak.git" domain "gitlab.com" demand mru-files %{
+} #plug "caksoylar/kakoune-smooth-scroll" config %{
+#	hook global WinCreate [^*].* %{
+#		smooth-scroll-enable
+#		smooth-scroll-map-key-normal <a-percent> '*%s<ret>'
+#	}
+#} 
+plug "https://gitlab.com/kstr0k/mru-files.kak.git" domain "gitlab.com" demand mru-files %{
 	set-option global mru_files_history %sh{ echo "$HOME/.local/share/kak/mru.txt" }
 } config %{
 	require-module kakhist; kakhist-init 
@@ -94,6 +100,7 @@ plug "Screwtapello/kakoune-inc-dec" domain "gitlab.com" config %{
 #
 
 plug-chain "ul/kak-tree" do %{
+	git submodule update --init --recursive
 	cargo install --force --path . --features "bash c cpp c_sharp css html javascript json julia python ruby rust typescript"
 } %{
 	declare-user-mode tree
