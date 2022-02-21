@@ -1,0 +1,17 @@
+#+TITLE: dotkak
+
+My personal configurations for the [[https://kakoune.org/][Kakoune]] editor.
+
+Notably I make use of [[https://github.com/alexherbo2/kakoune.cr][kakoune.cr]], [[https://github.com/kak-lsp/kak-lsp][kak-lsp]] and [[https://github.com/ul/kak-tree][kak-tree]].
+
+* Structure
+
+- ~kakrc~ the main configuration file for Kakoune.
+- ~colors~ A few themes for Kakoune. Some are not finished.
+- ~rc~ Most of the configuration is here.
+  - ~lib.kak~ useful commands I can use elsewhere in my configuration.
+  - ~settings.kak~ where generic settings for Kakoune are.
+  - ~plugins.kak~ where the configuration for plugins with [[https://github.com/andreyorst/plug.kak][plug.kak]].
+  - ~keys.kak~ where my keybindings are.
+  - ~filetype~ configurations for specfic filetypes.
+- ~snippets~ where snippets for [[https://github.com/occivink/kakoune-snippets][kakoune-snippets]] are.

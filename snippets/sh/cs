@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+#|
+exec csi -s "$0" "$@"
+|#
+
+${0:#body}

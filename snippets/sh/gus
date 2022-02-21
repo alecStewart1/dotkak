@@ -1,0 +1,4 @@
+#!/usr/bin/env guile -s
+!#
+
+${0:#body}

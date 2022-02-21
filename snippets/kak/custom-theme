@@ -1,0 +1,66 @@
+# $1
+
+evaluate-commands %sh{
+
+    # Code
+    face global value
+    face global type
+    face global variable
+    face global identifier
+    face global module
+    face global function
+    face global string
+    face global keyword
+    face global operator
+    face global attribute
+    face global comment
+    face global documentation
+    face global meta
+    face global builtin
+
+    # Markup
+    face global title
+    face global header
+    face global bold
+    face global italic
+    face global mono
+    face global block
+    face global link
+    face global bullet
+    face global list
+
+    # Builtin faces
+    face global Default
+
+    face global PrimarySelection
+    face global SecondarySelection
+
+    face global PrimaryCursor
+    face global SecondaryCursor
+    face global PrimaryCursorEol
+    face global SecondayCursorEol
+
+    face global LineNumbers
+    face global LineNumberCursor
+
+    face global MenuForeground
+    face global MenuBackground
+    face global MenuInfo
+
+    face global Information
+
+    face global Error
+
+    face global StatusLine
+    face global StatusLineMode
+    face global StatusLineInfo
+    face global StatusLineValue
+    face global StatusCursor
+
+    face global Prompt
+
+    face global MatchingChar
+
+    face global Whitespace
+
+}
