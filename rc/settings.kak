@@ -9,11 +9,8 @@
 # ~~~ UI ~~~
 #
 
-set-option -add global ui_options terminal_set_title=no ncurses_set_title=false
-set-option -add global ui_options terminal_change_colors=true
-set-option -add global ui_options terminal_assistant=cat ncurses_wheel_done_button=0 
-set-option -add global ui_options terminal_enable_mouse=no
-set-option -add global ui_options terminal_synchronized=yes
+set-option -add global ui_options terminal_set_title=no terminal_synchronized=yes terminal_change_colors=true terminal_assistant=cat terminal_enable_mouse=no
+set-option -add global ui_options ncurses_set_title=false ncurses_wheel_done_button=0 ncurses_change_colors=true
 
 # TODO make the modeline prettier
 set-option global modelinefmt '{{mode_info}} / %val{bufname} [ %opt{filetype} ] / %val{cursor_line}:%val{cursor_char_column} {{context_info}} / %val{client}'
@@ -25,10 +22,11 @@ colorscheme tron-legacy
 hook global WinCreate .* %{ 
 	try %{
 		add-highlighter window/numbers number-lines -relative -hlcursor -separator '  '
-		add-highlighter buffer/matching show-matching
-		add-highlighter buffer/search dynregex '%reg{/}' 0:search
-		add-highlighter buffer/wrap wrap -word -indent
-    	add-highlighter buffer/todo  regex \b(TODO|FIXME|HACK|PROJ|NOTE|IDEA)\b 0:default+rb
+		add-highlighter window/matching show-matching
+		add-highlighter window/ranges show_matching_range
+		add-highlighter window/search dynregex '%reg{/}' 0:search
+		add-highlighter window/wrap wrap -word -indent
+    	add-highlighter window/todo  regex \b(TODO|FIXME|HACK|PROJ|NOTE|IDEA)\b 0:default+rb
 	}
 }
 

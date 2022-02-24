@@ -16,8 +16,8 @@ map global normal -docstring 'restore selection(s) from register' Z z
 # --- Cutting, Yanking, Pasting ---
 #
 # This is the most universal and sane option.
-# So what I don't use a separate user-mode for this?
-# Neither does Vim or Emacs.
+# So why I don't use a separate user-mode for this?
+# Because neither does Vim or Emacs.
 # Get over it, nerd.
 
 map global normal d      '<a-|>xsel -i -b<ret>d'
