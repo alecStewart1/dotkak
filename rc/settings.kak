@@ -17,7 +17,7 @@ set-option global modelinefmt '{{mode_info}} / %val{bufname} [ %opt{filetype} ] 
 
 hook global BufOpenFile .* %{ modeline-parse }
 
-colorscheme tron-legacy
+colorscheme red-planet
 
 hook global WinCreate .* %{ 
 	try %{
